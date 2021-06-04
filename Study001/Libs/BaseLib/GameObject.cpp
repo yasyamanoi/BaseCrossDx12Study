@@ -9,7 +9,7 @@
 
 namespace basecross {
 
-	void GemaObject::SetConstants(BasicConstants& constants, const Transform& transform) {
+	void GemeObject::SetConstants(BasicConstants& constants, const Transform& transform) {
 		//‰Šú‰»
 		constants = {};
 		constants.activeFlg.x = 3;
@@ -53,13 +53,13 @@ namespace basecross {
 
 	}
 
-	void GemaObject::WriteConstantBuffers(FrameResource* pFrameResource) {
+	void GemeObject::WriteConstantBuffers(FrameResource* pFrameResource) {
 		BasicConstants constants;
 		SetConstants(constants, m_transform);
 		memcpy(pFrameResource->m_frameParamVec[m_paramIndex].m_pConstantBuffer, &constants, sizeof(BasicConstants));
 	}
 
-	void GemaObject::OnInitFrame(FrameResource* pFrameResource) {
+	void GemeObject::OnInitFrame(FrameResource* pFrameResource) {
 		auto pDefaultDev = App::GetDefaultDevice();
 		auto pDevice = App::GetID3D12Device();
 
@@ -94,13 +94,13 @@ namespace basecross {
 		pFrameResource->m_frameParamVec.push_back(param);
 	}
 
-	void GemaObject::OnRender() {
+	void GemeObject::OnRender() {
 		auto pDefaultDev = App::GetDefaultDevice();
 		auto pFrame = pDefaultDev->GetCurrentFrameResource();
 		PopulateCommandList(pFrame);
 	}
 
-	void GemaObject::PopulateCommandList(FrameResource* pFrameResource) {
+	void GemeObject::PopulateCommandList(FrameResource* pFrameResource) {
 		auto pDevice = App::GetDefaultDevice();
 		auto pCommandList = pDevice->GetComandList().Get();
 		//Srv

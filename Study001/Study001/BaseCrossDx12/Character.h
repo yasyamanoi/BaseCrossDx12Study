@@ -9,10 +9,10 @@
 
 namespace basecross {
 
-	class WallObject : public GemaObject {
+	class WallObject : public GemeObject {
 		float m_posSpan;
 	public:
-		WallObject(BaseScene* pBaseScene) :GemaObject(pBaseScene), m_posSpan(1.0f) {}
+		WallObject(BaseScene* pBaseScene) :GemeObject(pBaseScene), m_posSpan(1.0f) {}
 		virtual ~WallObject() {}
 		virtual void OnInit()override;
 		virtual void OnUpdate() override;
@@ -23,9 +23,9 @@ namespace basecross {
 
 	};
 
-	class SkyObject : public GemaObject {
+	class SkyObject : public GemeObject {
 	public:
-		SkyObject(BaseScene* pBaseScene) :GemaObject(pBaseScene) {}
+		SkyObject(BaseScene* pBaseScene) :GemeObject(pBaseScene) {}
 		virtual ~SkyObject() {}
 		virtual void OnInit()override;
 		virtual void OnUpdate() override;
