@@ -26,7 +26,7 @@ namespace basecross {
 	protected:
 		BaseScene() {}
 		virtual ~BaseScene() {}
-		vector<shared_ptr<GemeObject>> m_GameObjectVec;
+		vector<shared_ptr<GameObject>> m_GameObjectVec;
 	public:
 		void AddPipelineState(const wstring& key,const ComPtr<ID3D12PipelineState>& pipelineState, bool keyEnabled = false) {
 			if (keyEnabled) {
@@ -121,7 +121,7 @@ namespace basecross {
 				throw;
 			}
 		}
-		vector<shared_ptr<GemeObject>>& GetGameObjectVec() {
+		vector<shared_ptr<GameObject>>& GetGameObjectVec() {
 			return m_GameObjectVec;
 		}
 		virtual shared_ptr<Camera> GetActiveCamera() const = 0;

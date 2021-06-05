@@ -33,10 +33,10 @@ namespace basecross {
 	//--------------------------------------------------------------------------------------
 	// 配置されるオブジェクト
 	//--------------------------------------------------------------------------------------
-	class GemeObject : public ObjectInterface {
+	class GameObject : public ObjectInterface {
 	protected:
-		GemeObject(BaseScene* pBaseScene) :m_pBaseScene(pBaseScene) {}
-		virtual ~GemeObject() {}
+		GameObject(BaseScene* pBaseScene) :m_pBaseScene(pBaseScene) {}
+		virtual ~GameObject() {}
 		//フレーム内のCBV関連パラメータのインデックス
 		size_t m_paramIndex;
 		Transform m_transform;
