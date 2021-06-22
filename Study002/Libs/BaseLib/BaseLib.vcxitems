@@ -34,7 +34,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Basic\VertexHelper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Standerd\Component.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Standerd\GameObject.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Standerd\RenderComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Standerd\RenderComponents.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Standerd\Transform.h" />
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +70,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Basic\VertexHelper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Standerd\Component.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Standerd\GameObject.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Standerd\RenderComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Standerd\RenderComponents.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Standerd\Transform.cpp" />
   </ItemGroup>
 </Project>

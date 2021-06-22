@@ -146,6 +146,7 @@ namespace basecross {
 
 	void GameObject::ComponentUpdate() {
 		auto transptr = GetComponent<Transform>();
+//		auto RightPtr = GetComponent<Rigidbody>(false);
 		//マップを検証してUpdate
 		list<type_index>::iterator it = m_compOrder.begin();
 		while (it != m_compOrder.end()) {
@@ -155,17 +156,54 @@ namespace basecross {
 				//指定の型のコンポーネントが見つかった
 				if (it2->second->IsUpdateActive()
 					&& (it2->second != transptr)
+//					&& (it2->second != RightPtr)
 					) {
 					it2->second->OnUpdate();
 				}
 			}
 			it++;
 		}
+//		if (RightPtr && RightPtr->IsUpdateActive()) {
+//			RightPtr->OnUpdate();
+//		}
 		//TransformのUpdate
 		if (transptr->IsUpdateActive()) {
 			transptr->OnUpdate();
 		}
 	}
+
+/*
+	void GameObject::ComponentRender() {
+		//Transformがなければ例外
+		auto transptr = GetComponent<Transform>();
+//		auto RightPtr = GetComponent<Rigidbody>(false);
+		//マップを検証してDraw
+		list<type_index>::iterator it = m_compOrder.begin();
+		while (it != m_compOrder.end()) {
+			map<type_index, shared_ptr<Component> >::const_iterator it2;
+			it2 = m_compMap.find(*it);
+			//指定の型のコンポーネントが見つかった
+			if (it2 != m_compMap.end()) {
+				if (it2->second->IsRenderActive()
+					&& (it2->second != transptr)
+//					&& (it2->second != RightPtr)
+					) {
+					it2->second->OnRender();
+				}
+			}
+			it++;
+		}
+//		if (RightPtr && RightPtr->IsDrawActive()) {
+			//RigidbodyがあればDraw()
+//			RightPtr->OnDraw();
+//		}
+		if (transptr->IsRenderActive()) {
+			transptr->OnRender();
+		}
+
+	}
+
+*/
 	void GameObject::ComponentRender() {
 		//Transformがなければ例外
 		auto transptr = GetComponent<Transform>();
@@ -183,6 +221,7 @@ namespace basecross {
 			it++;
 		}
 	}
+
 
 	void GameObject::ComponentDestroy() {
 		auto transptr = GetComponent<Transform>();

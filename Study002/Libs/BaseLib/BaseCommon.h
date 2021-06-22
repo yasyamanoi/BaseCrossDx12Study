@@ -97,7 +97,7 @@ using namespace basecross::bsm;
 #include "Basic/BaseMesh.h"
 #include "Standerd/Component.h"
 #include "Standerd/Transform.h"
-#include "Standerd/RenderComponent.h"
+#include "Standerd/RenderComponents.h"
 #include "Standerd/GameObject.h"
 #include "Basic/BaseStage.h"
 #include "Basic/BaseScene.h"
